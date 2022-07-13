@@ -1,0 +1,13 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 652609b4e3f70a6ad7233f8bd9b6612dd0553462..e4ad1b770c59592fca2531525ead6e5413664d8f 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -185,7 +185,7 @@ ${givenBlock}`;
+ __name(ExpectedConstraintError, "ExpectedConstraintError");
+ 
+ // src/constraints/util/isUnique.ts
+-import fastDeepEqual from "fast-deep-equal/es6";
++import fastDeepEqual from "fast-deep-equal/es6/index.js";
+ import uniqWith from "lodash.uniqwith";
+ function isUnique(input) {
+   if (input.length < 2)

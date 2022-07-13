@@ -1,0 +1,13 @@
+diff --git a/build/util.js b/build/util.js
+index 166677d31569381a1273ba4acbfcd743f85d05e9..6d31fb325e495ab7af7f68dffd18c542b0c8a213 100644
+--- a/build/util.js
++++ b/build/util.js
+@@ -23,7 +23,7 @@ export function isString(obj) {
+     return typeof obj === 'string';
+ }
+ export function quote(arg) {
+-    if (/^[a-z0-9/_.-]+$/i.test(arg) || arg === '') {
++    if (/^[a-z0-9/@:_.-]+$/i.test(arg) || arg === '') {
+         return arg;
+     }
+     return (`$'` +

@@ -1,0 +1,83 @@
+{
+  "name": "triggerreactor-wiki-bot",
+  "version": "0.0.0",
+  "description": "Discord slash command utilities for TriggerReactor developer support",
+  "author": "Sayakie <sayakie@kakao.com>",
+  "contributors": [],
+  "scripts": {
+    "start": "node --enable-source-maps dist/index.js",
+    "build": "tsup",
+    "preinstall": "npx -y only-allow pnpm",
+    "postinstall": "is-ci || simple-git-hooks"
+  },
+  "main": "dist/index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "packageManager": "pnpm@^7",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TriggerReactor/wiki-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/TriggerReactor/wiki-bot/issues/new?labels=bug"
+  },
+  "keywords": [
+    "discord",
+    "webhook",
+    "discordbot",
+    "discord.js",
+    "slashcommand",
+    "utilities"
+  ],
+  "engines": {
+    "node": ">=16.9.0",
+    "pnpm": ">=7 <8"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@sapphire/decorators": "^4.3.6",
+    "@sapphire/framework": "3.0.0-next.87e5cdc.0",
+    "@sapphire/pieces": "^3.3.4",
+    "@sapphire/result": "^2.0.1",
+    "@sapphire/utilities": "^3.7.0",
+    "@skyra/env-utilities": "^1.0.1",
+    "@skyra/jaro-winkler": "^1.1.0",
+    "discord-api-types": "^0.36.1",
+    "discord.js": "^13.8.1",
+    "zx": "^7.0.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-angular": "^17.0.3",
+    "@sapphire/ts-config": "^3.3.4",
+    "@swc/core": "^1.2.212",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "^2.8.0",
+    "tslib": "^2.4.0",
+    "tsup": "^6.1.3",
+    "typescript": "^4.7.4"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@sapphire/shapeshift@3.5.0": "patches/@sapphire__shapeshift@3.5.0.patch",
+      "zx@7.0.7": "patches/zx@7.0.7.patch"
+    }
+  }
+}
