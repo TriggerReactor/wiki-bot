@@ -1,6 +1,6 @@
 {
   "name": "triggerreactor-wiki-bot",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "description": "Discord slash command utilities for TriggerReactor developer support",
   "author": "Sayakie <sayakie@kakao.com>",
   "contributors": [],
