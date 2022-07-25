@@ -8,15 +8,17 @@ import { fileURLToPath } from 'node:url'
 
 import { Directories, EnvironmentKeys } from '../utils/constants.js'
 
-interface GetDocumentsOptions {
+interface ConsumeRange {
+  offset?: number
+  take?: number
+}
+
+interface GetDocumentsOptions extends ConsumeRange {
   exclude?: string[]
   cache?: boolean
 }
 
-interface FuzzilySearchDocsOptions {
-  offset?: number
-  take?: number
-}
+type FuzzilySearchDocsOptions = ConsumeRange
 
 interface FuzzilySearchDocsResult {
   name: string
@@ -81,6 +83,7 @@ export class WikiCacheClient {
     const docs = []
     const exclude = options.exclude ?? []
     const excludeFilter = (docs: string): boolean => !exclude.includes(docs)
+    const { offset = 0, take = 25 } = options
 
     const isCache = options.cache ?? true
     if (isCache) {
@@ -91,7 +94,7 @@ export class WikiCacheClient {
       docs.push(...loadedDocs)
     }
 
-    return docs.filter(excludeFilter)
+    return docs.filter(excludeFilter).slice(offset, take)
   }
 
   public async getDocumentLink(document: string): Promise<Option<string>> {
