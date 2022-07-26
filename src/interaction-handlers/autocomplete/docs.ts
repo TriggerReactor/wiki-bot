@@ -35,7 +35,7 @@ export class DocsAutoCompleteHandler extends InteractionHandler<{
         if (isNullishOrEmpty(focusedOption.value)) {
           const docs = await this.container.wikiCacheClient.getDocs()
 
-          return this.some(docs.map(docsToChoiceData).slice(0, 25))
+          return this.some(docs.map(docsToChoiceData))
         }
 
         const fuzzyDocs = await this.container.wikiCacheClient //

@@ -50,7 +50,7 @@ export class DocsCommand extends Command {
       const messageActionRow = new MessageActionRow().setComponents(
         new MessageSelectMenu()
           .setCustomId(SelectMenuIdentifiers.ChoiceSuggestion)
-          .setOptions(docs.map(docsToSelectOption).slice(0, 25))
+          .setOptions(docs.map(docsToSelectOption))
       )
 
       await interaction.editReply({ components: [messageActionRow] })
