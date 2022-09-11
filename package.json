@@ -47,7 +47,7 @@
     "@skyra/env-utilities": "^1.0.1",
     "@skyra/jaro-winkler": "^1.1.0",
     "discord-api-types": "^0.36.1",
-    "discord.js": "^13.8.1",
+    "discord.js": "^14.3.0",
     "zx": "^7.0.7"
   },
   "devDependencies": {
