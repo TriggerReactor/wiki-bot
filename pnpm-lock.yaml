@@ -3,13 +3,15 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-angular': ^17.1.0
+  '@dareharu/eslint-config': ^1.0.2
+  '@dareharu/prettier-config': ^1.0.1
+  '@dareharu/ts-config': ^1.0.0
   '@discordjs/builders': ^0.16.0
   '@favware/cliff-jumper': ^1.8.7
   '@sapphire/decorators': ^5.0.0
   '@sapphire/framework': 3.1.1
   '@sapphire/pieces': ^3.5.1
   '@sapphire/result': ^2.4.1
-  '@sapphire/ts-config': ^3.3.4
   '@sapphire/utilities': ^3.9.3
   '@skyra/env-utilities': ^1.0.2
   '@skyra/jaro-winkler': ^1.1.0
@@ -52,8 +54,10 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.1.2_@swc+core@1.3.3
   '@commitlint/config-angular': 17.1.0
+  '@dareharu/eslint-config': 1.0.2_v6wod6dxx7mud42rlx75jk2osa
+  '@dareharu/prettier-config': 1.0.1
+  '@dareharu/ts-config': 1.0.0
   '@favware/cliff-jumper': 1.8.7
-  '@sapphire/ts-config': 3.3.4
   '@swc/core': 1.3.3
   '@types/node': 18.0.3
   '@typescript-eslint/eslint-plugin': 5.38.0_wsb62dxj2oqwgas4kadjymcmry
@@ -269,6 +273,39 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
+    dev: true
+
+  /@dareharu/eslint-config/1.0.2_v6wod6dxx7mud42rlx75jk2osa:
+    resolution: {integrity: sha512-nC7Nr2zUz+rVVl+WJHoKSoG65lsY8ELwv11JHcEwXy+LKLcnf1QzrVDpEvgma5JIY+LgJO0yyiW+4mRmq1/YEw==}
+    engines: {node: '>=16', npm: '>=8'}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.36.2
+      '@typescript-eslint/parser': ^5.36.2
+      eslint: ^8.23.0
+      typescript: ^4.8.3
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.38.0_wsb62dxj2oqwgas4kadjymcmry
+      '@typescript-eslint/parser': 5.38.0_irgkl5vooow2ydyo6aokmferha
+      eslint: 8.23.1
+      typescript: 4.8.3
+    optionalDependencies:
+      eslint-plugin-import: 2.26.0_cxqatnnjiq7ozd2bkspxnuicdq
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: true
+
+  /@dareharu/prettier-config/1.0.1:
+    resolution: {integrity: sha512-wvzHF/H93ToUqLrPH811bBiYbMm2mehp9gbs9atY+0Yq1UAczSHjdnoF8xUKcC9YR2ja2wBkikrrvGMyftqa0g==}
+    engines: {node: '>=16', npm: '>=8'}
+    dev: true
+
+  /@dareharu/ts-config/1.0.0:
+    resolution: {integrity: sha512-hB9WDxZbpd+cqN69fpPpVLn5zrDlTiG9eNLD5UId0NH8hV/lc3XNbO7gXPoArm07mxUDGbNz1sfA7RZWcebiaA==}
+    engines: {node: '>=16', npm: '>=8'}
+    dependencies:
+      typescript: 4.8.3
     dev: true
 
   /@discordjs/builders/0.16.0:
@@ -503,14 +540,6 @@ packages:
     dependencies:
       '@sapphire/utilities': 3.9.3
     dev: false
-
-  /@sapphire/ts-config/3.3.4:
-    resolution: {integrity: sha512-mWEUxCXh3cHKI7C8HJ049exVTMNaq+A/lJEDfM5ENSQ/OOZHd5DdmXn2jrYqFWbTRCHa0Vp2FAmACWBwePsBtg==}
-    engines: {node: '>=v16.0.0', npm: '>=8.0.0'}
-    dependencies:
-      tslib: 2.4.0
-      typescript: 4.8.3
-    dev: true
 
   /@sapphire/utilities/3.9.3:
     resolution: {integrity: sha512-7+ZjfbmRHqewmH32jpZfzrEuHpvTttTG7WjDl1GUtc4pkOMr0kYybrZmIEZYsUvF7PWzO0GrmOK2zWs3GuJo7g==}
