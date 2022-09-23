@@ -74,11 +74,5 @@
     "tslib": "^2.4.0",
     "tsup": "^6.2.3",
     "typescript": "^4.8.3"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@sapphire/shapeshift@3.5.0": "patches/@sapphire__shapeshift@3.5.0.patch",
-      "zx@7.0.7": "patches/zx@7.0.7.patch"
-    }
   }
 }
