@@ -1,5 +1,5 @@
 {
-  "extends": "@sapphire/ts-config/extra-strict",
+  "extends": "@dareharu/ts-config",
   "compilerOptions": {
     "target": "ES2021",
     "module": "ESNext",
