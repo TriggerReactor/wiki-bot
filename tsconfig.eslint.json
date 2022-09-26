@@ -1,7 +1,12 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "include": [
     "src/**/*.ts",
-    "*.?({m,c})js"
+    ".commitlintrc.cjs",
+    ".eslintrc.cjs",
+    ".lintstagedrc.cjs",
+    ".prettierrc.cjs",
+    ".simple-git-hooks.cjs",
+    "tsup.config.ts"
   ]
 }
