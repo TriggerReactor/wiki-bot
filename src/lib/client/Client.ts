@@ -2,8 +2,8 @@ import { SapphireClient } from '@sapphire/framework'
 import { container } from '@sapphire/pieces'
 import type { ClientOptions } from 'discord.js'
 
-import { CLIENT_OPTIONS } from '../../config.js'
-import { WikiCacheClient } from './WikiCacheClient.js'
+import { CLIENT_OPTIONS } from '#lib/config.js'
+import { WikiCacheClient } from '#lib/client/WikiCacheClient.js'
 
 export class Client extends SapphireClient {
   public constructor()

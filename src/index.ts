@@ -1,9 +1,6 @@
-import './config.js'
-import 'zx/globals'
+import '#lib/setup.js'
 
 import { Client } from '#lib/client/Client.js'
-
-$.verbose = process.env.NODE_ENV !== 'production'
 
 const client = new Client()
 
