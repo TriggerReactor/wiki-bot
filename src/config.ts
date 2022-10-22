@@ -4,9 +4,9 @@ import { Constants } from 'discord.js'
 import { GatewayIntentBits } from 'discord-api-types/v10'
 import { URL } from 'node:url'
 
-import { Directories } from './lib/utils/constants.js'
+import { RootDirectory } from '#lib/utils/constants.js'
 
-setup(new URL(`.env`, Directories.Root))
+setup(new URL(`.env`, RootDirectory))
 
 export const CLIENT_OPTIONS: ClientOptions = {
   intents: [GatewayIntentBits.Guilds],

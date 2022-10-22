@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+
 import { container } from '@sapphire/pieces'
 import { Option, Result } from '@sapphire/result'
 import { envParseNumber, envParseString } from '@skyra/env-utilities'
@@ -6,7 +8,7 @@ import { readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { Directories, EnvironmentKeys } from '../utils/constants.js'
+import { RootDirectory, EnvironmentKeys } from '#lib/utils/constants.js'
 
 interface ConsumeRange {
   offset?: number
@@ -14,8 +16,8 @@ interface ConsumeRange {
 }
 
 interface GetDocumentsOptions extends ConsumeRange {
-  exclude?: string[]
   cache?: boolean
+  exclude?: string[]
 }
 
 type FuzzilySearchDocsOptions = ConsumeRange
@@ -41,66 +43,28 @@ export class WikiCacheClient {
     })
   }
 
-  private get baseUrl(): string {
-    return envParseString(EnvironmentKeys.BASE_URL)
-  }
-
   private get absoluteDataDir(): string {
     return envParseString(EnvironmentKeys.DATA_DIR)
   }
 
-  private get relativeDataDir(): string {
-    return join(fileURLToPath(Directories.Root), this.absoluteDataDir)
-  }
-
-  private get targetGitToSync(): string {
-    return envParseString(EnvironmentKeys.TARGET_GIT_TO_SYNC)
+  private get baseUrl(): string {
+    return envParseString(EnvironmentKeys.BASE_URL)
   }
 
   private get fuzzilyDocsSearchThreshold(): number {
     return envParseNumber(EnvironmentKeys.FUZZILY_DOCS_SEARCH_THRESHOLD)
   }
 
+  private get relativeDataDir(): string {
+    return join(fileURLToPath(RootDirectory), this.absoluteDataDir)
+  }
+
+  private get targetGitToSync(): string {
+    return envParseString(EnvironmentKeys.TARGET_GIT_TO_SYNC)
+  }
+
   private static defaultExcludeFileFilter(filename: string): boolean {
     return !WikiCacheClient.defaultExcludeFiles.includes(filename)
-  }
-
-  public async initDocs(): Promise<boolean> {
-    const IOReadResult = await this.readDataDir()
-    if (IOReadResult.isOk()) {
-      return true
-    }
-
-    const { targetGitToSync, absoluteDataDir } = this
-
-    const operationResult = await $`git clone ${targetGitToSync} ${absoluteDataDir}`
-    return operationResult.exitCode === 0
-  }
-
-  public async getDocs(
-    options: GetDocumentsOptions = { cache: true, exclude: [] }
-  ): Promise<string[]> {
-    const docs = []
-    const exclude = options.exclude ?? []
-    const excludeFilter = (docs: string): boolean => !exclude.includes(docs)
-    const { offset = 0, take = 25 } = options
-
-    const isCache = options.cache ?? true
-    if (isCache) {
-      docs.push(...this.#loadedDocs)
-    } else {
-      const loadedDocs = await this.fetchDocs()
-
-      docs.push(...loadedDocs)
-    }
-
-    return docs.filter(excludeFilter).slice(offset, take)
-  }
-
-  public async getDocumentLink(document: string): Promise<Option<string>> {
-    const docs = await this.getDocs()
-
-    return Option.from(() => docs.find(doc => doc === document)).map(doc => this.baseUrl + doc)
   }
 
   public async fetchDocs(): Promise<string[]> {
@@ -109,6 +73,7 @@ export class WikiCacheClient {
     this.#loadedDocs.length = 0
 
     const result = await this.readDataDir()
+
     if (result.isErr()) {
       this.#loadedDocs.push(...temp)
     } else {
@@ -121,25 +86,6 @@ export class WikiCacheClient {
     }
 
     return [...this.#loadedDocs]
-  }
-
-  public async updateDocs(): Promise<boolean> {
-    if (this.#loadedDocs.length !== 0) {
-      return await within(async () => {
-        cd(this.relativeDataDir)
-        const operationResult = await $`git pull --rebase`
-
-        return operationResult.exitCode === 0
-      })
-    } else {
-      return await this.initDocs()
-        .then(async () => {
-          const fetched = await this.fetchDocs()
-
-          return fetched.length > 0
-        })
-        .catch(() => false)
-    }
   }
 
   public async fuzzilySearchDocs(docs: string): Promise<FuzzilySearchDocsResult[]>
@@ -161,6 +107,7 @@ export class WikiCacheClient {
 
     for (const document of docs) {
       const similarity = query === document ? 1 : jaroWinkler(document, query)
+
       if (similarity < this.fuzzilyDocsSearchThreshold) {
         continue
       }
@@ -171,7 +118,7 @@ export class WikiCacheClient {
       })
     }
 
-    if (similarityResults.length) {
+    if (similarityResults.length > 0) {
       similarityResults
         .sort(({ similarity: a }, { similarity: b }) => b - a)
         .slice(offset, offset + take)
@@ -181,6 +128,66 @@ export class WikiCacheClient {
     }
 
     return result
+  }
+
+  public async getDocs(
+    options: GetDocumentsOptions = { cache: true, exclude: [] }
+  ): Promise<string[]> {
+    const docs = []
+    const exclude = options.exclude ?? []
+    const excludeFilter = (docs: string): boolean => !exclude.includes(docs)
+    const { offset = 0, take = 25 } = options
+
+    const isCache = options.cache ?? true
+
+    if (isCache) {
+      docs.push(...this.#loadedDocs)
+    } else {
+      const loadedDocs = await this.fetchDocs()
+
+      docs.push(...loadedDocs)
+    }
+
+    return docs.filter(excludeFilter).slice(offset, take)
+  }
+
+  public async getDocumentLink(document: string): Promise<Option<string>> {
+    const docs = await this.getDocs()
+
+    return Option.from(() => docs.find(doc => doc === document)).map(doc => this.baseUrl + doc)
+  }
+
+  public async initDocs(): Promise<boolean> {
+    const IOReadResult = await this.readDataDir() // eslint-disable-line @typescript-eslint/naming-convention
+
+    if (IOReadResult.isOk()) {
+      return true
+    }
+
+    const { targetGitToSync, absoluteDataDir } = this
+
+    const operationResult = await $`git clone ${targetGitToSync} ${absoluteDataDir}`
+
+    return operationResult.exitCode === 0
+  }
+
+  public async updateDocs(): Promise<boolean> {
+    if (this.#loadedDocs.length !== 0) {
+      return await within(async () => {
+        cd(this.relativeDataDir)
+        const operationResult = await $`git pull --rebase`
+
+        return operationResult.exitCode === 0
+      })
+    } else {
+      return await this.initDocs()
+        .then(async () => {
+          const fetched = await this.fetchDocs()
+
+          return fetched.length > 0
+        })
+        .catch(() => false)
+    }
   }
 
   private async readDataDir(): Promise<Result<string[], Error>> {
