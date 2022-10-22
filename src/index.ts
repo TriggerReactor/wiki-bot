@@ -14,4 +14,6 @@ await client
 
     client.logger.error(reason)
     client.destroy()
+
+    throw new Error('App panic!', { cause: reason })
   })
