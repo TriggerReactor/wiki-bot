@@ -6,6 +6,7 @@ specifiers:
   '@dareharu/eslint-config': ^1.1.0
   '@dareharu/prettier-config': ^1.0.1
   '@dareharu/ts-config': ^1.0.1
+  '@dareharu/utilities': ^0.2.0
   '@discordjs/builders': ^0.16.0
   '@favware/cliff-jumper': ^1.8.8
   '@sapphire/decorators': ^5.0.0
@@ -39,6 +40,7 @@ specifiers:
   zx: ^7.1.1
 
 dependencies:
+  '@dareharu/utilities': 0.2.0
   '@discordjs/builders': 0.16.0
   '@sapphire/decorators': 5.0.0
   '@sapphire/framework': 3.1.3
@@ -305,6 +307,11 @@ packages:
     resolution: {integrity: sha512-Inr8ZozXc3oQ1Wuf1WuknN+cKp+UgETRmQpom+myaOMrLzY3WIqqowJJngMXKQXHdlIUKtokzfLs9YFy9i1+kw==}
     engines: {node: '>=16', npm: '>=8'}
     dev: true
+
+  /@dareharu/utilities/0.2.0:
+    resolution: {integrity: sha512-ZQzenRL11IQSFhx5qihp9+3ouWlTwjEQ5zW4S6ziSGlVq2wxkc2TiJIHhUw3L0OwURXOisBb4nT1v4jSH1ZFYQ==}
+    engines: {node: '>=16'}
+    dev: false
 
   /@discordjs/builders/0.16.0:
     resolution: {integrity: sha512-9/NCiZrLivgRub2/kBc0Vm5pMBE5AUdYbdXsLu/yg9ANgvnaJ0bZKTY8yYnLbsEc/LYUP79lEIdC73qEYhWq7A==}
