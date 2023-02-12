@@ -53,7 +53,7 @@
     "@sapphire/utilities": "^3.11.0",
     "@skyra/env-utilities": "^1.1.0",
     "@skyra/jaro-winkler": "^1.1.0",
-    "discord-api-types": "^0.37.32",
+    "discord-api-types": "^0.37.33",
     "discord.js": "^13.12.0",
     "undici": "^5.18.0",
     "zx": "^7.1.1"

@@ -21,7 +21,7 @@ specifiers:
   '@types/node': ^18.13.0
   '@typescript-eslint/eslint-plugin': ^5.51.0
   '@typescript-eslint/parser': ^5.51.0
-  discord-api-types: ^0.37.32
+  discord-api-types: ^0.37.33
   discord.js: ^13.12.0
   eslint: ^8.34.0
   eslint-config-prettier: ^8.6.0
@@ -52,7 +52,7 @@ dependencies:
   '@sapphire/utilities': 3.11.0
   '@skyra/env-utilities': 1.1.0
   '@skyra/jaro-winkler': 1.1.0
-  discord-api-types: 0.37.32
+  discord-api-types: 0.37.33
   discord.js: 13.12.0
   undici: 5.18.0
   zx: 7.1.1
@@ -1624,8 +1624,8 @@ packages:
     resolution: {integrity: sha512-bz/NDyG0KBo/tY14vSkrwQ/n3HKPf87a0WFW/1M9+tXYK+vp5Z5EksawfCWo2zkAc6o7CClc0eff1Pjrqznlwg==}
     dev: false
 
-  /discord-api-types/0.37.32:
-    resolution: {integrity: sha512-oUA4dhrzFOkvIWOc9WvKhPwsezUUVd5v5M7am1uupnRZjOmpE9RJMS0fTCUqNiMRlNAaZwPEy09UZOdIR9CyGQ==}
+  /discord-api-types/0.37.33:
+    resolution: {integrity: sha512-ZMH5RU3q1pvYS+2wGUJ5Zvy8jMGTQ4wCpbDlIQDkbIL/k6kJwBPsXnCg81g2GywlOuf0f8ezakxVSe+sZuY6ig==}
     dev: false
 
   /discord.js/13.12.0:
