@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "license": "Apache-2.0",
   "private": true,
-  "packageManager": "pnpm@^7",
+  "packageManager": "pnpm@^7.29.3",
   "type": "module",
   "imports": {
     "#lib/*": "./dist/lib/*"
@@ -53,10 +53,10 @@
     "@sapphire/utilities": "^3.11.0",
     "@skyra/env-utilities": "^1.1.0",
     "@skyra/jaro-winkler": "^1.1.0",
-    "discord-api-types": "^0.37.35",
+    "discord-api-types": "^0.37.36",
     "discord.js": "^13.13.1",
-    "undici": "^5.20.0",
-    "zx": "^7.2.0"
+    "undici": "^5.21.0",
+    "zx": "^7.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
@@ -65,10 +65,10 @@
     "@dareharu/prettier-config": "^1.0.1",
     "@dareharu/ts-config": "^1.1.0",
     "@favware/cliff-jumper": "^2.0.0",
-    "@swc/core": "^1.3.39",
-    "@types/node": "^18.15.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
+    "@swc/core": "^1.3.41",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
