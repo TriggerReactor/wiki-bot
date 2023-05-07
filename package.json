@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "license": "Apache-2.0",
   "private": true,
-  "packageManager": "pnpm@^7.32.2",
+  "packageManager": "pnpm@^7.32.3",
   "type": "module",
   "imports": {
     "#lib/*": "./dist/lib/*"
