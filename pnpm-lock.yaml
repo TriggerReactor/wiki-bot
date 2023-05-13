@@ -13,7 +13,7 @@ specifiers:
   '@sapphire/decorators': ^5.0.0
   '@sapphire/framework': 3.2.0
   '@sapphire/pieces': ^3.6.3
-  '@sapphire/result': ^2.6.3
+  '@sapphire/result': ^2.6.4
   '@sapphire/utilities': ^3.11.2
   '@skyra/env-utilities': ^1.2.0
   '@skyra/jaro-winkler': ^1.1.0
@@ -48,7 +48,7 @@ dependencies:
   '@sapphire/decorators': 5.0.0
   '@sapphire/framework': 3.2.0
   '@sapphire/pieces': 3.6.3
-  '@sapphire/result': 2.6.3
+  '@sapphire/result': 2.6.4
   '@sapphire/utilities': 3.11.2
   '@skyra/env-utilities': 1.2.0
   '@skyra/jaro-winkler': 1.1.0
@@ -587,7 +587,7 @@ packages:
     hasBin: true
     dependencies:
       '@favware/conventional-changelog-angular': 5.0.15
-      '@sapphire/result': 2.6.3
+      '@sapphire/result': 2.6.4
       '@sapphire/utilities': 3.11.0
       colorette: 2.0.20
       commander: 10.0.1
@@ -737,7 +737,7 @@ packages:
       '@sapphire/lexure': 1.1.4
       '@sapphire/pieces': 3.6.3
       '@sapphire/ratelimits': 2.4.6
-      '@sapphire/result': 2.6.3
+      '@sapphire/result': 2.6.4
       '@sapphire/stopwatch': 1.5.0
       '@sapphire/utilities': 3.11.2
     dev: false
@@ -746,7 +746,7 @@ packages:
     resolution: {integrity: sha512-YMq0NOIWsidxK5yUOsrRPq94soR6J+iaNUgdy66achpI2hwsvGwLTAnHFA7w/SotktaLXMhjPdaStYWgMhIrHA==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dependencies:
-      '@sapphire/result': 2.6.3
+      '@sapphire/result': 2.6.4
     dev: false
 
   /@sapphire/pieces/3.6.3:
@@ -763,11 +763,9 @@ packages:
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: false
 
-  /@sapphire/result/2.6.3:
-    resolution: {integrity: sha512-CQpcCgU+GlCvJeu+YLr8pGgB68r1ITj5s99LI1oIe4wu+n+ZFk9VPa8fIJI3Wl9ar5Xkkp8NoNOuH7o8Y4F9Xg==}
+  /@sapphire/result/2.6.4:
+    resolution: {integrity: sha512-o6rAnNbtumhR4Iy9t1p3xtOG9WtfO2OyyyaBrGUNThmhqf1cwvl5CO3/E0Hd66qdkuSqpJqC9TnnGzTmSoDd6A==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
-    dependencies:
-      tslib: 2.5.0
 
   /@sapphire/shapeshift/3.8.2:
     resolution: {integrity: sha512-NXpnJAsxN3/h9TqQPntOeVWZrpIuucqXI3IWF6tj2fWCoRLCuVK5wx7Dtg7pRrtkYfsMUbDqgKoX26vrC5iYfA==}
