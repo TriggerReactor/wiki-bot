@@ -21,14 +21,14 @@ dependencies:
     specifier: 3.2.0
     version: 3.2.0
   '@sapphire/pieces':
-    specifier: ^3.6.3
-    version: 3.6.3
+    specifier: ^3.7.0
+    version: 3.7.0
   '@sapphire/result':
     specifier: ^2.6.4
     version: 2.6.4
   '@sapphire/utilities':
-    specifier: ^3.12.0
-    version: 3.12.0
+    specifier: ^3.13.0
+    version: 3.13.0
   '@skyra/env-utilities':
     specifier: ^1.2.1
     version: 1.2.1
@@ -763,7 +763,7 @@ packages:
     dependencies:
       '@sapphire/discord-utilities': 2.12.0
       '@sapphire/duration': 1.1.0
-      '@sapphire/utilities': 3.12.0
+      '@sapphire/utilities': 3.13.0
       tslib: 2.6.0
     dev: false
 
@@ -780,11 +780,11 @@ packages:
       '@sapphire/discord-utilities': 2.12.0
       '@sapphire/discord.js-utilities': 5.1.2
       '@sapphire/lexure': 1.1.5
-      '@sapphire/pieces': 3.6.3
+      '@sapphire/pieces': 3.7.0
       '@sapphire/ratelimits': 2.4.6
       '@sapphire/result': 2.6.4
       '@sapphire/stopwatch': 1.5.0
-      '@sapphire/utilities': 3.12.0
+      '@sapphire/utilities': 3.13.0
     dev: false
 
   /@sapphire/lexure@1.1.5:
@@ -794,12 +794,12 @@ packages:
       '@sapphire/result': 2.6.4
     dev: false
 
-  /@sapphire/pieces@3.6.3:
-    resolution: {integrity: sha512-mOwp94pfHON3avzihU4X5fiiIZDAtiCsWULiDm3Vie1Osv0X2LRkVKBsSrs7hcYDJfU+puJEQIhVAj6ep7ZUOw==}
+  /@sapphire/pieces@3.7.0:
+    resolution: {integrity: sha512-DgkcvTja63rDPP4uByH2Ky3eNaYp+Yc1WoFaOsme5w5Nptruwj49sktY6KEbdBrxz23l3ofcxaqnfT/8RROJug==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/collection': 1.5.1
-      '@sapphire/utilities': 3.12.0
+      '@sapphire/utilities': 3.13.0
       tslib: 2.6.0
     dev: false
 
@@ -830,6 +830,12 @@ packages:
   /@sapphire/utilities@3.12.0:
     resolution: {integrity: sha512-y1JP4FdPBkZjJGJcb5Zx0ok64mtpGvz0TLOC49HTwYsfBQL8tsTct93yoYdEEMWSZFmOF1ZvV8L6jIJ1CW8bJw==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+    dev: true
+
+  /@sapphire/utilities@3.13.0:
+    resolution: {integrity: sha512-BD5ycPjZX5dXxrAb90dJTY8ukpPVBXgU17gA5ghK2memS4hwAzFYpvK+R+6zh4d6HYIKVuqrVhGXjvZenAa/Aw==}
+    engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+    dev: false
 
   /@skyra/env-utilities@1.2.1:
     resolution: {integrity: sha512-blyw0zCtrdP5SEiPAw62UuCd69bXdIBTtyzCXamVOcN2wqXt8HWkYrz8IdmZ2cvgnYIXpz7hzAmrIi3fGG7zzQ==}
