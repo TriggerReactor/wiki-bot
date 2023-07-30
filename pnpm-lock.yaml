@@ -247,7 +247,7 @@ packages:
       '@types/node': 18.17.1
       chalk: 4.1.2
       cosmiconfig: 8.2.0
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@18.17.1)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@4.9.5)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@18.17.1)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@4.9.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -598,11 +598,6 @@ packages:
     dependencies:
       eslint: 8.46.0
       eslint-visitor-keys: 3.4.2
-    dev: true
-
-  /@eslint-community/regexpp@4.6.0:
-    resolution: {integrity: sha512-uiPeRISaglZnaZk8vwrjQZ1CxogZeY/4IYft6gBOTqu1WhVXWmCmZMWxUv2Q/pxSvPdp1JPaO62kLOcOkMqWrw==}
-    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
   /@eslint-community/regexpp@4.6.2:
@@ -1050,7 +1045,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@eslint-community/regexpp': 4.6.0
+      '@eslint-community/regexpp': 4.6.2
       '@typescript-eslint/parser': 5.62.0(eslint@8.46.0)(typescript@4.9.5)
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/type-utils': 5.62.0(eslint@8.46.0)(typescript@4.9.5)
@@ -1166,7 +1161,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       '@typescript-eslint/types': 5.62.0
-      eslint-visitor-keys: 3.4.1
+      eslint-visitor-keys: 3.4.2
     dev: true
 
   /JSONStream@1.3.5:
@@ -1661,14 +1656,14 @@ packages:
       meow: 8.1.2
     dev: true
 
-  /cosmiconfig-typescript-loader@4.3.0(@types/node@18.17.1)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@4.9.5):
-    resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
-    engines: {node: '>=12', npm: '>=6'}
+  /cosmiconfig-typescript-loader@4.4.0(@types/node@18.17.1)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@4.9.5):
+    resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
+    engines: {node: '>=v14.21.3'}
     peerDependencies:
       '@types/node': '*'
       cosmiconfig: '>=7'
       ts-node: '>=10'
-      typescript: '>=3'
+      typescript: '>=4'
     dependencies:
       '@types/node': 18.17.1
       cosmiconfig: 8.2.0
@@ -1985,7 +1980,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2155,11 +2150,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /eslint-visitor-keys@3.4.1:
-    resolution: {integrity: sha512-pZnmmLwYzf+kWaM/Qgrvpen51upAktaaiI01nsJD/Yr3lMOdNtq0cxkrrg16w64VtisN6okbs7Q8AfGqj4c9fA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
   /eslint-visitor-keys@3.4.2:
     resolution: {integrity: sha512-8drBzUEyZ2llkpCA67iYrgEssKDUu68V8ChqqOfFupIaG/LCVPUT+CoGJpT77zJprs4T/W7p07LP7zAIMuweVw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2285,8 +2275,8 @@ packages:
       strip-final-newline: 2.0.0
     dev: true
 
-  /execa@7.1.1:
-    resolution: {integrity: sha512-wH0eMf/UXckdUYnO21+HDztteVv05rq2GXksxT4fCGeHkBhw1DROXh40wcjMcRqDOWE7iPJ4n3M7e2+YFP+76Q==}
+  /execa@7.2.0:
+    resolution: {integrity: sha512-UduyVP7TLB5IcAQl+OzLyLcS/l32W/GLg+AhHJ+ow40FOk2U3SAllPwR44v4vmdFwIWqpdwxxpQbF1n5ta9seA==}
     engines: {node: ^14.18.0 || ^16.14.0 || >=18.0.0}
     dependencies:
       cross-spawn: 7.0.3
@@ -3039,7 +3029,7 @@ packages:
       cli-truncate: 3.1.0
       commander: 10.0.1
       debug: 4.3.4
-      execa: 7.1.1
+      execa: 7.2.0
       lilconfig: 2.1.0
       listr2: 5.0.8
       micromatch: 4.0.5
@@ -3727,8 +3717,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.26.3:
-    resolution: {integrity: sha512-7Tin0C8l86TkpcMtXvQu6saWH93nhG3dGQ1/+l5V2TDMceTxO7kDiK6GzbfLWNNxqJXm591PcEZUozZm51ogwQ==}
+  /rollup@3.27.0:
+    resolution: {integrity: sha512-aOltLCrYZ0FhJDm7fCqwTjIUEVjWjcydKBV/Zeid6Mn8BWgDCUBBWT5beM5ieForYNo/1ZHuGJdka26kvQ3Gzg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -4180,7 +4170,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4(ts-node@10.9.1)
       resolve-from: 5.0.0
-      rollup: 3.26.3
+      rollup: 3.27.0
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
