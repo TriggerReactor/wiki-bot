@@ -387,8 +387,8 @@ packages:
     deprecated: no longer supported
     dev: false
 
-  /@discordjs/collection@1.5.1:
-    resolution: {integrity: sha512-aWEc9DCf3TMDe9iaJoOnO2+JVAjeRNuRxPZQA6GVvBf+Z3gqUuWYBy2NWh4+5CLYq5uoc3MOvUQ5H5m8CJBqOA==}
+  /@discordjs/collection@1.5.2:
+    resolution: {integrity: sha512-LDplPy8SPbc8MYkuCdnLRGWqygAX97E8NH7gA9uz+NZ/hXknUKJHuxsOmhC6pmHnF9Zmg0kvfwrDjGsRIljt9g==}
     engines: {node: '>=16.9.0'}
     dev: false
 
@@ -798,7 +798,7 @@ packages:
     resolution: {integrity: sha512-DgkcvTja63rDPP4uByH2Ky3eNaYp+Yc1WoFaOsme5w5Nptruwj49sktY6KEbdBrxz23l3ofcxaqnfT/8RROJug==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dependencies:
-      '@discordjs/collection': 1.5.1
+      '@discordjs/collection': 1.5.2
       '@sapphire/utilities': 3.13.0
       tslib: 2.6.1
     dev: false
@@ -1975,17 +1975,17 @@ packages:
       eslint: 8.46.0
     dev: true
 
-  /eslint-import-resolver-node@0.3.7:
-    resolution: {integrity: sha512-gozW2blMLJCeFpBwugLTGyvVjNoeo1knonXAcatC6bjPBZitotxdWf7Gimr25N4c0AAOo4eOUfaG82IJPDpqCA==}
+  /eslint-import-resolver-node@0.3.8:
+    resolution: {integrity: sha512-tEe+Pok22qIGaK3KoMP+N96GVDS66B/zreoVVmiavLvRUEmGRtvb4B8wO9jwnb8d2lvHtrkhZ7UD73dWBVnf/Q==}
     dependencies:
       debug: 3.2.7
-      is-core-module: 2.12.1
-      resolve: 1.22.3
+      is-core-module: 2.13.0
+      resolve: 1.22.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.7)(eslint@8.46.0):
+  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.8)(eslint@8.46.0):
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -2009,7 +2009,7 @@ packages:
       '@typescript-eslint/parser': 5.62.0(eslint@8.46.0)(typescript@4.9.5)
       debug: 3.2.7
       eslint: 8.46.0
-      eslint-import-resolver-node: 0.3.7
+      eslint-import-resolver-node: 0.3.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2054,16 +2054,16 @@ packages:
       debug: 3.2.7
       doctrine: 2.1.0
       eslint: 8.46.0
-      eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.7)(eslint@8.46.0)
+      eslint-import-resolver-node: 0.3.8
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.8)(eslint@8.46.0)
       has: 1.0.3
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.fromentries: 2.0.6
       object.groupby: 1.0.0
       object.values: 1.1.6
-      resolve: 1.22.3
+      resolve: 1.22.4
       semver: 6.3.1
       tsconfig-paths: 3.14.2
     transitivePeerDependencies:
@@ -2083,7 +2083,7 @@ packages:
       eslint-utils: 2.1.0
       ignore: 5.2.4
       minimatch: 3.1.2
-      resolve: 1.22.2
+      resolve: 1.22.4
       semver: 6.3.1
     dev: true
 
@@ -2818,8 +2818,8 @@ packages:
       ci-info: 3.8.0
     dev: true
 
-  /is-core-module@2.12.1:
-    resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==}
+  /is-core-module@2.13.0:
+    resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
       has: 1.0.3
     dev: true
@@ -3303,7 +3303,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.4
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
@@ -3313,7 +3313,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       hosted-git-info: 4.1.0
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
@@ -3676,20 +3676,11 @@ packages:
       global-dirs: 0.1.1
     dev: true
 
-  /resolve@1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve@1.22.4:
+    resolution: {integrity: sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg==}
     hasBin: true
     dependencies:
-      is-core-module: 2.12.1
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
-    dev: true
-
-  /resolve@1.22.3:
-    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
-    hasBin: true
-    dependencies:
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
@@ -3717,8 +3708,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.27.0:
-    resolution: {integrity: sha512-aOltLCrYZ0FhJDm7fCqwTjIUEVjWjcydKBV/Zeid6Mn8BWgDCUBBWT5beM5ieForYNo/1ZHuGJdka26kvQ3Gzg==}
+  /rollup@3.27.2:
+    resolution: {integrity: sha512-YGwmHf7h2oUHkVBT248x0yt6vZkYQ3/rvE5iQuVBh3WO8GcJ6BNeOkpoX1yMHIiBm18EMLjBPIoUDkhgnyxGOQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -4170,7 +4161,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4(ts-node@10.9.1)
       resolve-from: 5.0.0
-      rollup: 3.27.0
+      rollup: 3.27.2
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
