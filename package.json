@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "license": "Apache-2.0",
   "private": true,
-  "packageManager": "pnpm@^8.7.1",
+  "packageManager": "pnpm@^8.7.4",
   "type": "module",
   "imports": {
     "#lib/*": "./dist/lib/*"
@@ -55,7 +55,7 @@
     "@skyra/jaro-winkler": "^1.1.0",
     "discord-api-types": "^0.37.56",
     "discord.js": "^13.16.0",
-    "undici": "^5.23.0",
+    "undici": "^5.24.0",
     "zx": "^7.2.3"
   },
   "devDependencies": {
@@ -65,11 +65,11 @@
     "@dareharu/prettier-config": "^1.0.1",
     "@dareharu/ts-config": "^1.1.0",
     "@favware/cliff-jumper": "^2.1.2",
-    "@swc/core": "^1.3.82",
-    "@types/node": "^18.17.14",
+    "@swc/core": "^1.3.83",
+    "@types/node": "^18.17.15",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.48.0",
+    "eslint": "^8.49.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.28.1",
