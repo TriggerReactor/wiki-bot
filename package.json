@@ -79,7 +79,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.3.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.6.2",
     "simple-git-hooks": "^2.13.1",
     "tslib": "^2.8.1",
     "tsup": "^6.7.0",
